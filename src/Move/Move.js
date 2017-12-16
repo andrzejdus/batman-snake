@@ -27,8 +27,6 @@ export default function moveTo(Snake, Destination) {
     },
   ].filter(pos => pos.value).sort((alpha, bravo) => bravo.value - alpha.value).map(x => x.direction);
 
-  console.log("Destination is in direction: ", direction, ' my direction is: ', Snake.direction);
-
   switch (`${Snake.direction}, ${direction}`) {
     case 'N, E': return "R";
     case 'E, S': return "R";

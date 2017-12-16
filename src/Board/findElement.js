@@ -9,9 +9,9 @@ export function findPosition(board, match) {
 
 export function findSnake(board, player) {
   const snakeParts = filterPositions(board, element => element && element.player === player);
-  const [head] = snakeParts.filter(element => element.element.head);
+  const [headElement] = snakeParts.filter(element => element.element.head);
 
-  return new Snake(head.tile, head.element.head /* direction */, snakeParts.length);
+  return new Snake(headElement.tile, headElement.element.head /* direction */, snakeParts.length);
 }
 
 export function filterPositions(board, match) {

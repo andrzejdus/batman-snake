@@ -5,7 +5,6 @@ export default class RunInCirclesStrategy {
    * @param direction
    */
   constructor(board, direction) {
-    this.board = board;
     this.radius = Math.ceil(board.snake.length / 4) + 1;
     this.direction = direction || ["L", "R"][Math.floor(Math.random() * 2)];
     this.iteration = 0;
