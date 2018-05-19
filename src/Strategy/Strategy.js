@@ -1,13 +1,14 @@
 import FetchStrategy from './FetchStrategy';
-import RunInCircles from './RunInCirclesStrategy';
+import RunInCirclesStrategy from './RunInCirclesStrategy';
 
 /**
  * @param {Board} board
+ * @return {FetchStrategy|RunInCirclesStrategy}
  */
 export default function getNextStrategy(board) {
   if (board.hasShortestPathToApple) {
-    return new FetchStrategy(board);
+    return new FetchStrategy();
   }
 
-  return new RunInCircles(board);
+  return new RunInCirclesStrategy(board);
 }

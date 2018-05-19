@@ -14,11 +14,13 @@ const snek = [
 ]
 
 export default class BatmanSnake {
-  constructor(game) {
-    this.game = game;
-
+  constructor() {
     this.strategy = undefined;
     this.lastApple = undefined;
+  }
+
+  init(game) {
+    this.game = game;
   }
 
   getMove(state) {

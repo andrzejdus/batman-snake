@@ -11,7 +11,7 @@ test("finds players", function () {
   ], [], [
     undefined,
     { "player": "charlie", "head": true },
-  ]])).getPlayerPositions();
+  ]])).playerPositions;
 
   expect(players.length).toBe(3);
 
