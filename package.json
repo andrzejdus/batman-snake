@@ -1,5 +1,9 @@
 {
   "name": "batman-snek",
+  "scripts": {
+    "start": "node build/index.js",
+    "build": "babel src -d build"
+  },
   "dependencies": {
     "babel-cli": "^6.26.0",
     "babel-jest": "^21.2.0",
